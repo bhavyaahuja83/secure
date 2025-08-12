@@ -2,10 +2,11 @@
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { Bill } from '../types';
+import { UserOptions } from 'jspdf-autotable';
 
 declare module 'jspdf' {
   interface jsPDF {
-    autoTable: (options: any) => jsPDF;
+    autoTable: (options: UserOptions) => jsPDF;
   }
 }
 
@@ -114,8 +115,8 @@ export const generatePDF = (bill: Bill): void => {
       5: { halign: 'right', cellWidth: 25 }
     }
   });
-
-  yPosition = (doc as any).lastAutoTable.finalY + 10;
+     const typedDoc = doc as jsPDF & { lastAutoTable: { finalY: number } };
+  yPosition = typedDoc.lastAutoTable.finalY + 15;
 
   // SECTION 4: TOTALS & TAXES (Right-aligned box)
   const totalsX = 140;
@@ -147,7 +148,9 @@ export const generatePDF = (bill: Bill): void => {
     }
   });
 
-  yPosition = (doc as any).lastAutoTable.finalY + 15;
+
+   yPosition = typedDoc.lastAutoTable.finalY + 10;
+   
 
   // SECTION 5: AMOUNT IN WORDS
   doc.setFont('helvetica', 'italic');

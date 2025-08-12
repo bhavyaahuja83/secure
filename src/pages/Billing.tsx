@@ -131,9 +131,9 @@ const Billing: React.FC = () => {
     }));
   };
 
-  useEffect(() => {
-    calculateTotals();
-  }, [billData.items, billData.isIGST]);
+useEffect(() => {
+  calculateTotals();
+}, [billData.items, billData.isIGST]);
 
   const saveClientIfNew = (bill: Bill) => {
     if (!bill.clientId && bill.clientName && bill.clientGSTIN) {

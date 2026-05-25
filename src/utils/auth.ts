@@ -3,7 +3,7 @@ import { User } from '../types';
 
 export const USERS: User[] = [
 
-  { passcode: '3000', name: 'Name' },
+  { passcode:  '3000', name: 'Name' },
 
 ];
 

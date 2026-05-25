@@ -34,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onLogout }) => {
       {/* Logo/Brand */}
       <div className="p-6 border-b border-gray-700">
         <h1 className="text-xl font-bold text-center">
-          SECURE AUTOMATION
+          SECURE SOLUTIONS
         </h1>
         <p className="text-xs text-gray-400 text-center mt-1">
           Admin Dashboard

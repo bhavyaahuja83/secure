@@ -35,7 +35,7 @@ const PasscodeScreen: React.FC<PasscodeScreenProps> = ({ onAuthenticate }) => {
             </svg>
           </div>
           <CardTitle className="text-2xl font-bold text-gray-900">
-            Secure Automation & Safety Solutions
+            Secure Solutions
           </CardTitle>
           <p className="text-gray-600">Enter your passcode to access the admin dashboard</p>
         </CardHeader>

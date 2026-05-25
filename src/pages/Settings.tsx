@@ -26,16 +26,15 @@ import { toast } from 'sonner';
 
 const Settings: React.FC = () => {
   const [companyInfo, setCompanyInfo] = useState({
-    name: 'SECURE AUTOMATION & SAFETY SOLUTIONS',
-    address: 'VILLAGE SUNEHTI, GOHANA ROAD\nSONIPAT, HARYANA - 131001',
-    phone: '9354078266',
-    email: 'info@secureautomation.com',
+    name: 'SECURE SOLUTIONS',
+    address: '7th Floor, XYZ Building\nGURUGRAM, HARYANA - 131001',
+    phone: '9999999999',
+    email: 'info@securesolutions.com',
     gstin: '06BUIPA4572Q1Z7',
-    pan: 'BUIPA4572Q',
     bankName: 'HDFC BANK',
     accountNumber: '1234567890',
     ifsc: 'HDFC0001234',
-    branch: 'SONIPAT'
+    branch: 'GURUGRAM'
   });
 
   const [gstSettings, setGstSettings] = useState({
@@ -208,14 +207,7 @@ const Settings: React.FC = () => {
                     onChange={(e) => setCompanyInfo(prev => ({ ...prev, gstin: e.target.value }))}
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="pan">PAN Number</Label>
-                  <Input
-                    id="pan"
-                    value={companyInfo.pan}
-                    onChange={(e) => setCompanyInfo(prev => ({ ...prev, pan: e.target.value }))}
-                  />
-                </div>
+                
               </div>
               
               <div className="space-y-2">
@@ -457,11 +449,10 @@ const Settings: React.FC = () => {
                 </div>
                 <p className="text-yellow-700 mt-1">5 users currently have access to the system</p>
                 <div className="mt-2 space-y-1">
-                  <Badge variant="outline">Pawan (Admin)</Badge>
-                  <Badge variant="outline">Manish</Badge>
-                  <Badge variant="outline">Bhavya</Badge>
-                  <Badge variant="outline">Dev</Badge>
-                  <Badge variant="outline">Santosh</Badge>
+                  <Badge variant="outline">John (Admin)</Badge>
+                  <Badge variant="outline">ben (Agent)</Badge>
+                  <Badge variant="outline">Alice (Manager)</Badge>
+                  
                 </div>
               </div>
 

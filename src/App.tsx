@@ -28,13 +28,10 @@ function App() {
 
   const handleAuthenticate = (passcode: string) => {
     const user = validatePasscode(passcode);
-    if (user) {
+    
       setCurrentUser(user);
       setIsAuthenticated(true);
-      toast.success(`Welcome back, ${user.name}!`);
-    } else {
-      toast.error('Invalid passcode. Please try again.');
-    }
+     
   };
 
   const handleLogout = () => {
@@ -49,9 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      {!isAuthenticated ? (
-        <PasscodeScreen onAuthenticate={handleAuthenticate} />
-      ) : (
+      { (
         <Router>
           <Layout onLogout={handleLogout}>
             <Routes>
